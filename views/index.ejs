@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banter Box</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white text-center py-4 shadow-lg">
+        <h1 class="text-3xl font-extrabold">Banter Box</h1>
+    </header>
+
+    <!-- Chat Container -->
+    <main class="flex-1 overflow-y-auto p-6 space-y-4">
+        <!-- Incoming Message -->
+        <div class="flex flex-col items-start">
+            <span class="text-sm text-gray-400">User 1</span>
+            <div class="bg-gray-700 rounded-lg shadow-lg p-4 max-w-xs text-white">
+                <p>Hello! How are you?</p>
+            </div>
+        </div>
+
+        <!-- Outgoing Message -->
+        <div class="flex flex-col items-end">
+            <span class="text-sm text-gray-400">You</span>
+            <div class="bg-gray-500 text-white rounded-lg shadow-lg p-4 max-w-xs">
+                <p>I'm good, thanks! How about you?</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Input Section -->
+    <footer class="bg-gray-800 p-4 flex items-center space-x-4 shadow-lg">
+        <input type="text" placeholder="Type a message" class="flex-1 bg-gray-700 border border-gray-600 rounded-full p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500">
+        <button class="bg-gray-600 text-white rounded-full px-6 py-3 hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105">Send</button>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  
+</script>
+</body>
+</html>
