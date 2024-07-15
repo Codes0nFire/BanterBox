@@ -20,7 +20,12 @@ app.get("/",function(req,res){
 
 
 io.on("connection",function(socket){
-    console.log("connected to server");
+    
+   socket.on("message",function(msg){
+     socket.broadcast.emit("rmessage",msg);
+   })
+
+
 })
 
 
